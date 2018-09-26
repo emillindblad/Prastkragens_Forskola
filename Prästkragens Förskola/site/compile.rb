@@ -1,6 +1,6 @@
 require_relative './lib/slim-template.rb'
-variables = 0
+variables = {}
 
 html = slim(:test, locals: variables)
 
-File.write("index.html",html)
+File.write("test.html",html)
