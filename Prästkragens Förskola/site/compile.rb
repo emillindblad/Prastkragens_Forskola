@@ -3,4 +3,4 @@ variables = {}
 
 html = slim(:test, locals: variables)
 
-File.write("test.html",html)
+File.write("index.html",html)
