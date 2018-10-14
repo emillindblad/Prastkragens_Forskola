@@ -5,18 +5,23 @@
         height: 150vh;
     }
 
+    div.wrapper {
+        height: auto;
+    }
+
     header.mobile {
-        height: 24vh;
+        height: 27vh;
         width: 100vw;
         background-color: hotpink;
         position: fixed;
         display: grid;
-        grid-template-rows: repeat(9,3vh);
-        grid-template-columns: 20px auto 20px;      
+        grid-template-rows: repeat(10,3vh);
+        grid-template-columns: 20px auto 20px;    
     }
 
     header.mobile i.material-icons {
-        font-size: 2.5rem;
+        /* font-size: 2.5rem; */
+        font-size: 5vh;
         color: rgba(0, 0, 0, 0.54);
         display:flex;
         justify-content:center;
@@ -28,7 +33,7 @@
     header.mobile nav {
         background-color: white;
         height: 6vh;
-        grid-row: 7/8;
+        grid-row: 8/9;
         grid-column: span 3;
         display: grid;
         grid-template-columns: 0rem 3rem auto 3rem 0rem;
@@ -37,16 +42,15 @@
     }
 
     header.mobile div.coverimg {
-        height: 19vh;
+        height: 21vh;
         background-color: grey;
         grid-column: span 3;
 
     }
 
     header.mobile div.logoimg {
-        height: 10vh;
+        height: 13.5vh;
         background-color: black;
-        padding: 0 20px;
         grid-row: 3/6;
         grid-column: 2;
     }
@@ -57,7 +61,7 @@
         background-color: white;
         transition: height 0.35s;
         overflow: hidden;
-        grid-row: 9;
+        grid-row: 10;
     }
     
     div.show {
@@ -65,19 +69,35 @@
     }
 
     div.mobilemenu ul {
+        margin: 0;
         list-style: none;
         text-decoration: none;
         }
 
     div.mobilemenu ul li {
-        margin: 25px 0px;
+        margin: 3vh 0px;
     }
     .navlink {
-        font-size: 1.15rem;
+        font-size: 2.1vh;
         text-decoration: none;
         color: gray;
         font-family: Roboto;
         font-weight: 500;
+    }
+
+    div.logoimg img {
+        background-color: white;
+        height: inherit;
+    }
+
+    div.main {
+        height: 50vh;
+        background-color: red;
+        padding-top: 27vh;
+    }
+
+    p {
+        margin: 0;
     }
 
 }
