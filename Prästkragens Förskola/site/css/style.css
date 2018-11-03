@@ -1,12 +1,20 @@
 @media only screen and (max-device-width: 455px) {
     body {
-        background-color: lightskyblue;
+        /* background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 32%, rgba(33,181,226,1) 64%, rgba(26,93,112,1) 100%); */
+        background-color: #e1e1e1;
         margin: 0;
-        height: 150vh;
+        height: 250vh;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    a {
+        text-decoration: none !important; 
+        color: black;
     }
 
     div.wrapper {
         height: auto;
+        padding-top: 27vh;
     }
 
     header.mobile {
@@ -32,6 +40,7 @@
 
     header.mobile nav {
         background-color: white;
+        min-height: 40px;
         height: 6vh;
         grid-row: 8/9;
         grid-column: span 3;
@@ -43,7 +52,8 @@
 
     header.mobile div.coverimg {
         height: 21vh;
-        background-color: grey;
+        background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 32%, rgba(33,181,226,1) 64%, rgba(26,93,112,1) 100%);
+        
         grid-column: span 3;
 
     }
@@ -58,14 +68,15 @@
     div.mobilemenu {
         height: 0;
         width: 100vw;
-        background-color: white;
+        background-color: #1a5d70;
+        color: black;
         transition: height 0.35s;
         overflow: hidden;
         grid-row: 10;
     }
     
     div.show {
-        height: 30.5vh;
+        height: 64vw;
     }
 
     div.mobilemenu ul {
@@ -77,11 +88,12 @@
     div.mobilemenu ul li {
         margin: 3vh 0px;
     }
+
     .navlink {
-        font-size: 2.1vh;
+        font-size: 1em;
         text-decoration: none;
-        color: gray;
-        font-family: Roboto;
+        color: white;
+        font-family: 'Roboto', sans-serif;
         font-weight: 500;
     }
 
@@ -92,19 +104,111 @@
 
     div.main {
         height: 50vh;
-        padding-top: 27vh;
+        display: grid;
+        grid-template-columns: 0 1fr 0;
+        grid-template-rows: 0 repeat(3,auto);
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
     }
 
     div.infotext {
-        margin: 20px;
-        background-color: white;
+        /* background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
         padding: 20px;
-        line-height: 1.3em;
-        font-family: Roboto;
+        line-height: 1.4em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        grid-column: 2;
+        grid-row: 2;
+        border-radius: 5px;
+
     }
 
+    div.circlenav {
+        display: grid;
+        grid-template-rows: 170px 1fr;
+        grid-template-columns: 170px 1fr 1fr 170px;
+    }
+
+    div.pic {
+        height: 170px;
+        width: 170px;
+        background-color: black;
+        border-radius: 50%;
+        grid-row: span 2;
+    }
+
+    div#pic1 {
+        grid-column: 1;
+        background-image: url(/site/img/verksamhet.jpg);
+        grid-row: 1;
+    }
+
+    div.pic1info {
+        text-align: center;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    div.pic1info h3 {
+        margin: 6px 0 4px 0;
+    }
+
+    div.pic1info p {
+        margin: 0;
+    }
+
+    div.pic2info {
+        text-align: center;
+        grid-row: 2;
+        grid-column: 4;
+        margin: 0 !important;
+    }
+
+    div.pic2info h3 {
+        margin: 6px 0 4px 0;
+    }
+
+    div.pic2info p {
+        margin: 0;
+    }
+    div#pic2 {
+        grid-column: 4;
+        grid-row: 1;
+        background-image: url(/site/img/blanketter.jpg);
+    }
     div.infotext h2 {
         text-align: center;
     }
+    div.news {
+        grid-row: 3;
+        grid-column: 2;
+    }
+    div.news h1 {
+        text-align: center;
+        border-bottom: #1a5d70 solid 3px;
+        padding-bottom: 10px;
+    }
+
+    div.news article {
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 20px;
+        line-height: 1.4em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    }
+
+    div.news article h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    div.news article h3 {
+        text-align: center;
+        margin: 0 0 0 0;
+        color: #1a5d70;
+    }
+
 
 }

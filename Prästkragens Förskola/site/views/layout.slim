@@ -9,5 +9,27 @@ html lang="en"
         link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/
         title Prästkragens Förskola
     body
-        == yield
-        
+    script src="js/menutoggle.js"
+    header.mobile
+        div.coverimg
+        div.logoimg
+            img src="img/pojkeingenhand.png" alt="Pojke"
+            img src="img/logo.png" alt="Logga"/
+        nav
+            i.material-icons onclick="toggleMenu()" menu
+        div.mobilemenu
+            ul
+                li
+                    a.navlink href="index.html" Startsidan
+                li
+                    a.navlink href="verksamhet.html" Verksamhet
+                li
+                    a.navlink href="" Personal
+                li
+                    a.navlink href="" Blanketter
+                li
+                    a.navlink href="" Länkar
+                li
+                    a.navlink href="" Kontaktinformation
+    div.wrapper
+        == yield    
