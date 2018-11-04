@@ -7,6 +7,7 @@ html lang="en"
         link rel="stylesheet" href="css/style.css"/
         link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/ 
         link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         title Prästkragens Förskola
     body
     script src="js/menutoggle.js"
@@ -17,19 +18,24 @@ html lang="en"
             img src="img/logo.png" alt="Logga"/
         nav
             i.material-icons onclick="toggleMenu()" menu
+            a.homebtn href="index.html"
+                i.material-icons style="grid-column: 4;" home
         div.mobilemenu
             ul
                 li
-                    a.navlink href="index.html" Startsidan
+                    a.navlink href="nyheter.html" Nyheter
                 li
                     a.navlink href="verksamhet.html" Verksamhet
                 li
-                    a.navlink href="" Personal
+                    a.navlink href="personal.html" Personal
                 li
-                    a.navlink href="" Blanketter
+                    a.navlink href="blanketter.html" Blanketter
                 li
-                    a.navlink href="" Länkar
+                    a.navlink href="lankar.html" Länkar
                 li
-                    a.navlink href="" Kontaktinformation
+                    a.navlink href="kontaktinfo.html" Kontaktinformation
     div.wrapper
-        == yield    
+        == yield
+    footer
+        h4 Prästkragens Förskola
+        <i class="fab fa-facebook-square"></i>

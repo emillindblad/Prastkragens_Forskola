@@ -1,26 +1,47 @@
-@media only screen and (max-device-width: 455px) {
+@media only screen and (max-device-width: 500px) {
     body {
         /* background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 32%, rgba(33,181,226,1) 64%, rgba(26,93,112,1) 100%); */
         background-color: #e1e1e1;
         margin: 0;
-        height: 250vh;
+        min-height: 100vh;
+        height: auto;
         font-family: 'Roboto', sans-serif;
     }
 
     a {
-        text-decoration: none !important; 
+        text-decoration: none; 
         color: black;
     }
 
     div.wrapper {
+        min-height: 58vh;
         height: auto;
         padding-top: 27vh;
     }
 
+    footer {
+        height: 15vh;
+        width: 100vw;
+        background-color: #222222;
+        color: white;
+        text-align: right;
+        padding: 20px 40px 20px 40px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    footer i.fab.fa-facebook-square {
+        font-size: 2.5em;
+        color: #21B5E2;
+    }
+    footer h4 {
+        margin: 0;
+        justify-content: left;
+    }
     header.mobile {
         height: 27vh;
         width: 100vw;
-        background-color: hotpink;
         position: fixed;
         display: grid;
         grid-template-rows: repeat(10,3vh);
@@ -36,6 +57,14 @@
         align-items:center; 
         grid-row: 2;
         grid-column: 2;
+    }
+
+    header.mobile a.homebtn {
+        grid-row: 2;
+        grid-column: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     header.mobile nav {
@@ -103,25 +132,19 @@
     }
 
     div.main {
-        height: 50vh;
         display: grid;
         grid-template-columns: 0 1fr 0;
         grid-template-rows: 0 repeat(3,auto);
-        grid-row-gap: 10px;
         grid-column-gap: 20px;
     }
 
     div.infotext {
-        /* background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
         padding: 20px;
         line-height: 1.4em;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         grid-column: 2;
         grid-row: 2;
-        border-radius: 5px;
-
     }
 
     div.circlenav {
@@ -138,13 +161,16 @@
         grid-row: span 2;
     }
 
-    div#pic1 {
-        grid-column: 1;
-        background-image: url(/site/img/verksamhet.jpg);
-        grid-row: 1;
+    a#pic1 div.pic {
+        background-image: url('../img/verksamhet.jpg');
     }
 
-    div.pic1info {
+    a#pic1 {
+        grid-column: 1;
+        grid-row: span 2;
+    }
+
+    a#pic1 div.pic1info {
         text-align: center;
         grid-row: 2;
         grid-column: 1;
@@ -158,7 +184,7 @@
         margin: 0;
     }
 
-    div.pic2info {
+    a#pic2 div.pic2info {
         text-align: center;
         grid-row: 2;
         grid-column: 4;
@@ -172,10 +198,77 @@
     div.pic2info p {
         margin: 0;
     }
-    div#pic2 {
+    a#pic2 div.pic {
+        background-image: url('../img/blanketter.jpg');
+    }
+
+    a#pic2 {
         grid-column: 4;
-        grid-row: 1;
-        background-image: url(/site/img/blanketter.jpg);
+        grid-row: span 2;
+    }
+
+    @media only screen and (max-device-width: 430px) {
+        div.circlenav {
+            display: grid;
+            grid-template-rows: 170px 1fr 170px 1fr;
+            grid-template-columns: 170px;
+            justify-content: center;
+        }
+    
+        div.pic {
+            height: 170px;
+            width: 170px;
+            background-color: black;
+            border-radius: 50%;
+            grid-row: span 1;
+        }
+    
+        a#pic1 {
+            grid-column: 1;
+            grid-row: span 2;
+            margin-bottom: 10px;
+        }
+
+        a#pic1 div.pic {
+            background-image: url(/site/img/verksamhet.jpg);
+        }
+    
+        div.pic1info {
+            text-align: center;
+            grid-row: 2;
+            grid-column: 1;
+        }
+    
+        div.pic1info h3 {
+            margin: 6px 0 4px 0;
+        }
+    
+        div.pic1info p {
+            margin: 0;
+        }
+    
+        div.pic2info {
+            text-align: center;
+            grid-row: 2;
+            grid-column: 1;
+            margin: 0 !important;
+        }
+    
+        div.pic2info h3 {
+            margin: 6px 0 4px 0;
+        }
+    
+        div.pic2info p {
+            margin: 0;
+        }
+        a#pic2 {
+            grid-column: 1;
+            grid-row: span 2;
+        }
+
+        a#pic2 div.pic {
+            background-image: url(/site/img/blanketter.jpg);
+        }
     }
     div.infotext h2 {
         text-align: center;
@@ -183,11 +276,13 @@
     div.news {
         grid-row: 3;
         grid-column: 2;
+        padding: 0 20px 0 20px;
     }
     div.news h1 {
         text-align: center;
         border-bottom: #1a5d70 solid 3px;
         padding-bottom: 10px;
+        margin-bottom: 30px;
     }
 
     div.news article {
@@ -197,6 +292,8 @@
         line-height: 1.4em;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
+        margin-bottom: 30px;
+        border-radius: 5px;
     }
 
     div.news article h2 {
@@ -210,5 +307,30 @@
         color: #1a5d70;
     }
 
+    div.news a {
+        font-weight: 400;
+    }
+
+    div.news article span {
+        float: right;
+    }
+
+    div.blanketter {
+        padding: 20px 40px 40px 40px;
+    }
+
+    div.blanketter h1 {
+        text-align: center;
+        border-bottom: #1a5d70 solid 3px;
+        padding-bottom: 10px;
+    }
+
+    div.blanketter a {
+        text-decoration: underline;
+    }
+
+    .blomman {
+        display: none;
+    }
 
 }
