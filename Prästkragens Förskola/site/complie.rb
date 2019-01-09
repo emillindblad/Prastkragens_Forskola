@@ -19,14 +19,26 @@ html = slim(:index, locals: variables)
 
 File.write("index.html",html)
 
+html = slim(:nyheter, locals: variables)
+
+File.write("nyheter.html",html)
+
 html = slim(:verksamhet, locals: variables)
 
 File.write("verksamhet.html",html)
+
+html = slim(:personal, locals: variables)
+
+File.write("personal.html",html)
 
 html = slim(:blanketter, locals: variables)
 
 File.write("blanketter.html",html)
 
-html = slim(:personal, locals: variables)
+html = slim(:lankar, locals: variables)
 
-File.write("personal.html",html)
+File.write("lankar.html",html)
+
+html = slim(:kontaktinfo, locals: variables)
+
+File.write("kontaktinfo.html",html)

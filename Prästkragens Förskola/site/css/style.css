@@ -147,6 +147,7 @@
 
     header.mobile div.logoimg {
         height: 13.5vh;
+        width: 100%;
         background-color: black;
         grid-row: 3/6;
         grid-column: 2;
@@ -155,6 +156,7 @@
     div.logoimg img {
         background-color: white;
         height: inherit;
+        width: inherit;
     }
     /* #endregion */
 
@@ -170,7 +172,7 @@
     }
     
     div.show {
-        height: 64vw;
+        height: 281px;
     }
 
     div.mobilemenu ul {
@@ -180,7 +182,7 @@
         }
 
     div.mobilemenu ul li {
-        margin: 3vh 0px;
+        margin: 24px 0px;
     }
     
     .navlink {
@@ -436,4 +438,43 @@
         overflow-wrap: break-word;
     }
     /* #endregion */
+    div.kontaktinfo h2 {
+        text-align: center;
+        border-bottom: #1a5d70 solid 3px;
+        padding-bottom: 10px;
+    }
+
+    div.kontaktinfo {
+        padding: 20px 40px 40px 40px;
+    }
+
+    div.lankar h2 {
+        text-align: center;
+        border-bottom: #1a5d70 solid 3px;
+        padding-bottom: 10px;
+    }
+
+    div.lankar {
+        padding: 20px 40px 40px 40px;
+    }
+
+    div.newspage h2 {
+        text-align: center;
+        border-bottom: #1a5d70 solid 3px;
+        padding-bottom: 10px;
+    }
+    div.newspage {
+        padding: 20px 40px 40px 40px;
+    }
+    div.verksamhet h2 {
+        text-align: center;
+        border-bottom: #1a5d70 solid 3px;
+        padding-bottom: 10px;
+    }
+    div.verksamhet {
+        padding: 20px 40px 40px 40px;
+    }
+}   
+body {
+    background-color: #e1e1e1;
 }
