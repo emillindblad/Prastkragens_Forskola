@@ -36,11 +36,17 @@
         grid-template-rows: 0 1fr 1fr;
         grid-template-columns: repeat(6,1fr);
     }
+    footer a {
+        grid-row: 1/5;
+        grid-column: span 2;
+        margin-top: 5px;
+    }
     footer i {
         font-size: 2.25em !important;
         color: #21B5E2;
         grid-row: 2;
         grid-column: span 2;
+        margin-top: 5px;
     }
     footer h4 {
         margin: 0;
@@ -48,9 +54,10 @@
     }
     footer p {
         font-family: 'Roboto', sans-serif;
+        color: white;
         font-weight: 300;       
         grid-row: 3;
-        margin-top: 0;
+        margin-top: 12px;
     }
     footer p.facebook {
         grid-column: 5/7;
@@ -67,10 +74,14 @@
     @media only screen and (max-device-width: 410px) {
         footer {
             display: grid;
-            height: 24vh;
-            min-height: 210px;
+            height: 195px;
             grid-template-rows: 0 repeat(4,1fr);
         }
+
+        a.adress {
+            grid-row: 3/6;
+        }
+        /* 
         i#contacticon {
             grid-column: 2;
         }
@@ -90,7 +101,7 @@
         }
         footer p.facebook {
             grid-column: 4/7;
-        }
+        } */
         
     }
     /* #endregion */
@@ -474,7 +485,9 @@
     div.verksamhet {
         padding: 20px 40px 40px 40px;
     }
-}   
-body {
-    background-color: #e1e1e1;
+}
+@media only screen and (min-device-width: 500px) {
+    body {
+        background-color: black;
+    }
 }

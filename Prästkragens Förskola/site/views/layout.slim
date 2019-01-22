@@ -37,10 +37,12 @@ html lang="en"
     div.wrapper
         == yield
     footer
-        / h4 Prästkragens Förskola
-        i.material-icons id="contacticon" contact_phone
-        p.phone 031-26 63 18
-        i.material-icons id="adressicon" location_on
-        p.adress Oxledsvägen 4 43367 SÄVEDALEN
-        i class="fab fa-facebook-square"
-        p.facebook Facebook
+        a.phone href="tel:031266318"
+            i.material-icons id="contacticon" contact_phone
+            p.phone 031-26 63 18
+        a.adress href="https://goo.gl/maps/aAnq4EiFu8A2"
+            i.material-icons id="adressicon" location_on
+            p.adress Oxledsvägen 4 43367 SÄVEDALEN
+        a.facebook href="https://www.facebook.com/Pr%C3%A4stkragens-F%C3%B6rskola-210900089034186/"
+            i class="fab fa-facebook-square"
+            p.facebook Facebook
